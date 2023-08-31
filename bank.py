@@ -26,7 +26,7 @@ SELECIONE UMA DAS OPÇÔES ABAIXO:
 [4]****SAQUE
 [5]*****TRANSFERENCIA
 [6]****** SAIR
-[7]*******ENTRAR
+[7]*******ENTRAR vasco
 '''
 cont = 0
 usuario = dict()
@@ -98,6 +98,7 @@ while True:
                 print (requisicao2)
                 requisicao2 = requests.patch(f"{link}/usuarios/{id_prop}/info/.json",data =json.dumps(info2))
                 
+        
         
     elif opcao == 5:
         contas = dict()
