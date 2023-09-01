@@ -4,18 +4,17 @@ def cont (numconta):
     primo = False
     meta = numconta//2
     while True :
-        print('meta')
         if numconta % meta  == 0 and meta != 1:
-            print (meta)
+       
             primo = False
-            break
+            return False
+            
         elif meta  == 1:
             primo = True
-            print ('numero primo')
-            break
+            return True
+            
         else:
             meta -= 1
-test = int (input('digite o numero da conta: '))
-cont(test)
+
 
             

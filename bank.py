@@ -1,3 +1,4 @@
+from conta import cont
 import random 
 import requests     
 import json
@@ -28,14 +29,21 @@ SELECIONE UMA DAS OPÇÔES ABAIXO:
 [6]****** SAIR
 [7]*******ENTRAR vasco
 '''
-cont = 0
+contador = 0
 usuario = dict()
 usuario['saldo'] = 0
 id = ''
 id_prop = ''
 while True:
     print (menu)
-    conta = random.randint(0,1000000)
+    while True:
+        conta = random.randint(0,1000)
+        if cont(conta) == True:
+            print (f'sua conta é {conta}')
+            usuario['conta'] = conta
+            break
+        else:
+            conta = random.randint(0,1000000)
     opcao = int (input ('selecione uma das opões acima listadas: '))
     if opcao == 1:
         cadastro (usuario)
